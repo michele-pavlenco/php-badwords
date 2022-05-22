@@ -1,10 +1,10 @@
 <?php 
-    $text = 'Il tuo gatto é grasso';
-    $text2 = str_replace('grasso', 'g****o', $text);
-    if(isset($_GET['gatto'])){
-        $text3 = $_GET['gatto'];
+    $text = 'Com è il tuo gatto';
+    $text2 = str_replace('parola', '***', $text);
+    if(isset($_GET['parola'])){
+        $text = $_GET['parola'];
     } else {
-        $text3 = "Tu sei grasso ";
+        $text = "Il gatto e grasso ";
     }
 ?>
 
@@ -17,11 +17,18 @@
     <title>PHP Badwords</title>
 </head>
 <body>
-<h2>Frase:</h2>
-    <p><?php echo $text ?></p>
-    <p>Lunghezza: <?php echo  '<strong>'.strlen($text).'</strong>' ?></p>
-    <h2>Frase modificata:</h2>
+
+
+
+
+
+
+    <h2>Frase:</h2>
     <p><?php echo $text2 ?></p>
     <p>Lunghezza: <?php echo '<strong>'.strlen($text2).'</strong>'?> </p>
+    <h2>Frase modificata:</h2>
+    <p><?php echo $text ?></p>
+    <p>Lunghezza: <?php echo  '<strong>'.strlen($text).'</strong>' ?></p>
+    
 </body>
 </html>
